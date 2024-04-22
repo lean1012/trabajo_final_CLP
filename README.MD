@@ -2,30 +2,13 @@
 
 ## Sumador punto flotante 32bits y 64bits
 
-El repositorio implementa un bloque sumador punto flotante floatpoint_adder.vhd. Este sumador realiza la suma en precisión simple (32 bits) o precisión doble (64 bits) de dos números. A continuación la instancia del componente para una suma de 32 bits.
-
- component floatpoint_adder is
-   generic (
-   PRECISION_BITS: natural := 32
-   );
-
-   port(
-     a_i: in std_logic_vector(PRECISION_BITS-1 downto 0);
-     b_i: in std_logic_vector(PRECISION_BITS-1 downto 0);
-     start_i: in std_logic;
-     s_o: out std_logic_vector(PRECISION_BITS-1 downto 0);
-     done_o: out std_logic;
-     rst: in std_logic;
-     clk: in std_logic
-   );
- end component;
+El repositorio implementa un bloque sumador punto flotante floatpoint_adder.vhd. Este sumador realiza la suma en precisión simple (32 bits) o precisión doble (64 bits) de dos números.
 
 El bloque tiene las siguientes entradas:
 a y b: números a sumar.
 clk.
 rst. 
 start_i : start_i en 1 indica que se quiere realizar la suma de a con b. 
-
 
 El bloque tiene las siguientes salidas:
 done_o : indica que se realizó la suma y el resultado en s_o es válido.
