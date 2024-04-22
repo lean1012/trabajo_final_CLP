@@ -1,4 +1,4 @@
-# Trabajo Final para la materia Circuitos Lógicos Programables Co20
+# Trabajo Final para la materia Circuitos Lógicos Programables CESE 20Co - 2024
 
 ## Sumador punto flotante 32bits y 64bits
 
