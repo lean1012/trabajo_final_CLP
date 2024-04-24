@@ -168,7 +168,7 @@ begin
 							if (to_integer(unsigned(a_i(PRECISION_BITS - 1 - SIGN_BITS downto PRECISION_BITS - SIGN_BITS - EXPONENT_BITS))) = 0) then
 								-- es denormalizado agrego 00 y exp 1
 								mantissa_a <= "00" & a_i(PRECISION_BITS - 1 - SIGN_BITS - EXPONENT_BITS downto 0);
-								exponent_a <= std_logic_vector(to_unsigned(0, EXPONENT_BITS));
+								exponent_a <= std_logic_vector(to_unsigned(1, EXPONENT_BITS));
 							else
 								-- numero normalizado, agrego 01 y copio el exponente
 								mantissa_a <= "01" & a_i(PRECISION_BITS - 1 - SIGN_BITS - EXPONENT_BITS downto 0);
@@ -178,7 +178,7 @@ begin
 							if (to_integer(unsigned(b_i(PRECISION_BITS - 1 - SIGN_BITS downto PRECISION_BITS - SIGN_BITS - EXPONENT_BITS))) = 0) then
 								-- es denormalizado agrego 00 y exp 1
 								mantissa_b <= "00" & b_i(PRECISION_BITS - 1 - SIGN_BITS - EXPONENT_BITS downto 0);
-								exponent_b <= std_logic_vector(to_unsigned(0, EXPONENT_BITS));
+								exponent_b <= std_logic_vector(to_unsigned(1, EXPONENT_BITS));
 							else
 								-- numero normalizado, agrego 01 y copio el exponente
 								mantissa_b <= "01" & b_i(PRECISION_BITS - 1 - SIGN_BITS - EXPONENT_BITS downto 0);
